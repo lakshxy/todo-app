@@ -1,7 +1,11 @@
+version: "1"
 services:
   - type: web
     name: todo-app
     env: java
+    plan: free
+    repo: https://github.com/lakshxy/todo-app
+    region: oregon
     buildCommand: ./mvnw clean install
     startCommand: java -jar target/todo-0.0.1-SNAPSHOT.jar
     envVars:
