@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.todo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +25,7 @@ public class ToDoController {
     @PutMapping("/{id}/complete")
     public ToDo markAsComplete(@PathVariable Long id) {
         ToDo todo = toDoRepository.findById(id).orElseThrow();
-        todo.setCompleted(true);
+        todo.setStatus(ToDo.Status.COMPLETED);
         return toDoRepository.save(todo);
     }
 }

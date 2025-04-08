@@ -1,4 +1,4 @@
-package com.todo.model;
+package com.todo;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

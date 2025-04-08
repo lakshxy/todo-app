@@ -1,6 +1,5 @@
-package com.example.todo;
+package com.todo;
 
-import com.todo.model.ToDo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
