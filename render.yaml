@@ -2,7 +2,7 @@ services:
   - type: web
     name: todo-app
     plan: free
-    buildCommand: "./mvnw clean install"  # Ensure this command works locally
-    startCommand: "java -jar target/*.jar"  # Ensure this points to the correct jar file
+    buildCommand: "./mvnw clean install"
+    startCommand: "java -jar target/todo-0.0.1-SNAPSHOT.jar"
     branch: main
     region: oregon

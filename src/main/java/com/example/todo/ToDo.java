@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.todo.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -10,8 +10,17 @@ public class ToDo {
     private Long id;
 
     private String title;
-    private boolean completed = false;
+    private String description;
+
+    @Enumerated(EnumType.STRING)
+    private Status status = Status.PENDING;
+
     private LocalDateTime createdAt = LocalDateTime.now();
+
+    public enum Status {
+        PENDING,
+        COMPLETED
+    }
 
     // Getters and Setters
     public Long getId() {
@@ -30,12 +39,20 @@ public class ToDo {
         this.title = title;
     }
 
-    public boolean isCompleted() {
-        return completed;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 
     public LocalDateTime getCreatedAt() {
