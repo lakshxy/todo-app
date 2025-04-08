@@ -2,7 +2,7 @@ services:
   - type: web
     name: todo-app
     plan: free
-    runtime: java17 
+    runtime: java  # Add this line to specify the Java runtime
     buildCommand: "./mvnw clean install"
     startCommand: "java -jar target/*.jar"
     branch: main
